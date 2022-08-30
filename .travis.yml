@@ -28,7 +28,7 @@ script:
   - docker tag udagram-api-user anptt4/udagram-api-user:v1
   # Build and tag feed-api
   - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend anptt4/udagram-frontend:v1
+  - docker tag udagram-frontend anptt4/udagram-frontend:v10
   # Build and tag feed-api
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   - docker tag udagram-reverseproxy anptt4/udagram-reverseproxy:v1
@@ -37,5 +37,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push anptt4/udagram-api-feed:v1
   - docker push anptt4/udagram-api-user:v1
-  - docker push anptt4/udagram-frontend:v1
+  - docker push anptt4/udagram-frontend:v10
   - docker push anptt4/udagram-reverseproxy:v1

@@ -15,4 +15,4 @@ script:
   - docker push anptt4/udagram-frontend:v1
   - docker push anptt4/udagram-api-feed:v1
   - docker push anptt4/udagram-api-user:v1
-  - docker push anptt4/reverseproxy:v1
+  - docker push anptt4/udagram-reverseproxy:v1
